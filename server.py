@@ -2,10 +2,12 @@ import numpy as np
 from flask import Flask, request, jsonify
 import pickle
 import pandas as pd
+from flask_cors import CORS
 
 
 app = Flask(__name__)
 model = pickle.load(open('model.pkl','rb'))
+CORS(app)
 
 @app.route('/api/predict',methods=['POST'])
 def predict():
