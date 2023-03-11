@@ -19,5 +19,5 @@ def home_view():
         return "<h1>Welcome to User Modeling Server</h1>"
 
 
-if __name__ == '__main__':
-    app.run()
+# if __name__ == '__main__':
+#     app.run()
