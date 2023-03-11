@@ -17,7 +17,11 @@ def predict():
 @app.route("/")
 def home_view():
         return "<h1>Welcome to User Modeling Server</h1>"
+        
+@app.route("/get")
+def get_view():
+        return jsonify(status='ok')
 
 
-# if __name__ == '__main__':
-#     app.run()
+if __name__ == '__main__':
+    app.run(port=5000)
